@@ -1,0 +1,186 @@
+:root {
+  --fundo: #12141c;
+  --superficie: #1c2030;
+  --borda: #2c3248;
+  --texto: #e8eaf2;
+  --texto-suave: #a3a9c0;
+  --destaque: #5ee0a0;
+  --roblox: #4aa3ff;
+  --isaac: #ff6b6b;
+  --minecraft: #7ed957;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--destaque);
+}
+
+.topo {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid var(--borda);
+  background: linear-gradient(180deg, #1a1f33 0%, var(--fundo) 100%);
+}
+
+.topo h1 {
+  font-size: 2.6rem;
+  letter-spacing: 0.02em;
+}
+
+.topo p {
+  color: var(--texto-suave);
+  margin-top: 0.3rem;
+}
+
+.topo nav {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.topo nav a {
+  text-decoration: none;
+  color: var(--texto);
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.topo nav a:hover {
+  background: var(--destaque);
+  color: var(--fundo);
+  border-color: var(--destaque);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.bloco {
+  margin: 2.5rem 0;
+}
+
+.bloco h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--destaque);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.cartao {
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-top: 4px solid var(--destaque);
+  border-radius: 10px;
+  padding: 1.2rem;
+  transition: transform 0.2s;
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+}
+
+.cartao h3 {
+  margin-bottom: 0.4rem;
+}
+
+.cartao p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.cartao .tag {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--fundo);
+  background: var(--destaque);
+  border-radius: 999px;
+}
+
+.cartao.roblox {
+  border-top-color: var(--roblox);
+}
+
+.cartao.roblox .tag {
+  background: var(--roblox);
+}
+
+.cartao.isaac {
+  border-top-color: var(--isaac);
+}
+
+.cartao.isaac .tag {
+  background: var(--isaac);
+}
+
+.cartao.minecraft {
+  border-top-color: var(--minecraft);
+}
+
+.cartao.minecraft .tag {
+  background: var(--minecraft);
+}
+
+.rolagem {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--superficie);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--borda);
+}
+
+th {
+  background: #232842;
+  color: var(--destaque);
+}
+
+tbody tr:hover {
+  background: #232842;
+}
+
+@media (max-width: 500px) {
+  .topo h1 {
+    font-size: 2rem;
+  }
+}
